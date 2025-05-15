@@ -1,0 +1,466 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  font-family: 'Montserrat', sans-serif;
+  color: white;
+  overflow-x: hidden;
+  background-color: black;
+}
+
+body {
+  position: relative;
+  z-index: 0;
+}
+
+canvas {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background-color: black
+}
+
+
+.contenu {
+  position:relative;
+  z-index: 1;
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+
+.animated-text {
+  opacity: 0; /* Début invisible */
+  animation: slideInLeft 1s ease-out forwards;
+  animation-delay: 0.5s;
+}
+
+/* Animation séquencée pour chaque bloc de texte */
+.animated-text:nth-child(1) {
+  animation-delay: 0.5s;
+}
+
+.animated-text:nth-child(2) {
+  animation-delay: 1s;
+}
+
+.animated-text:nth-child(3) {
+  animation-delay: 1.5s;
+}
+
+.animated-text:nth-child(4) {
+  animation-delay: 2s;
+}
+
+.animated-text:nth-child(5) {
+  animation-delay: 2.5s;
+}
+
+
+/* Style des éléments */
+h1 {
+  font-size: 55px;
+}
+
+
+.description {
+  font-size: 18px;
+  font-weight: 500;
+
+}
+
+.bjr {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+h1, h2 {
+    font-family: 'Italiana', serif;
+}
+
+
+h2 {
+    font-size: 45px;
+}
+
+
+.btn {
+    display: flex;
+    margin-top: 20px;
+}
+
+p {
+    font-weight: 500;
+    margin-left: 20px;
+}
+
+.btn a {
+    font-size: 18px;
+    text-decoration: none;
+    color: white;
+    background-color: #f8a7c4; 
+    border-radius: 30px;
+    padding: 10px 20px;
+    display: inline-block;
+    font-weight: 550;
+    transition: background-color 0.3s ease;
+}
+
+.btn a:hover {
+    background-color: #d16fa8;
+}
+
+logo {
+  font-size: 34px;
+  font-weight: 900;
+  color: #222;
+}
+
+.folio {
+  color: #f9c0d8; /* Rose un peu plus foncé */
+  font-size: 28px;
+  font-weight: 800;
+}
+
+
+.container {
+  padding-top: 130px;
+  margin-left: 85px;
+}
+
+#typing-name {
+  font-family: 'Playfair display SC', serif;
+  font-size: 65px;
+  color: #f9c0d8;
+  margin-left: 50px;
+}
+
+.cursor {
+  display: inline-block;
+  animation: blink 0.7s step-end infinite;
+}
+
+@keyframes blink {
+  50% {
+    opacity: 0;
+  }
+}
+
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+
+ul li {
+  margin: 0 20px; /* Espacement entre les éléments */
+}
+
+ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+  padding: 15px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+
+header ul {
+  display: flex;
+  gap: 25px;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+header ul li a {
+  position: relative;
+  text-decoration: none;
+  color: #333;
+  font-weight: 500;
+  font-size: 18px;
+  padding: 5px 0;
+  transition: color 0.3s ease;
+}
+
+header ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background-color: #f9c0d8; /* Rose */
+  transition: width 0.3s ease;
+}
+
+header ul li a:hover::after {
+  width: 100%;
+}
+
+header ul li a:hover {
+  color: #f9c0d8;
+}
+
+/* Lien actif */
+header ul li a.active {
+  color: #f9c0d8;
+  font-weight: 600;
+}
+
+header ul li a.active::after {
+  width: 100%;
+}
+
+.qui {
+  text-align: center;
+  color: #f9c0d8;
+  font-weight: 700;
+
+}
+
+.txt2 {
+  max-width: 800px;
+  margin: 80px auto; /* centré verticalement et horizontalement */
+  padding: 40px;
+  background-color: black; /* rose très pâle, tu peux adapter */
+  box-shadow: 0 0 15px rgba(249, 192, 216, 0.4), 0 0 60px rgba(249, 192, 216, 0.25); /* ombre douce */
+  border-radius: 20px; /* bords arrondis */
+  font-size: 18px;
+  line-height: 1.7;
+  color: white;
+  text-align: justify;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeInUp 1s ease forwards;
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin: 60px auto;
+  padding: 0 20px;
+}
+.skill-card {
+  background-color: black; /* fond noir doux */
+  box-shadow: 0 0 15px rgba(249, 192, 216, 0.4), 0 0 60px rgba(249, 192, 216, 0.25);
+  border-radius: 20px;
+  padding: 25px;
+  width: 280px;
+  height: 400px;
+  color: white;
+  transition: transform 0.3s ease;
+}
+
+.skill-card:hover {
+  transform: translateY(-10px);
+}
+
+.skill-card p {
+  font-size: 20px;
+  margin-bottom: 15px;
+  color: #f9c0d8;
+  font-weight: bold;
+}
+
+.skill-card ul {
+  padding-left: 20px;
+}
+
+.skill-card li {
+  margin-bottom: 10px;
+  line-height: 1.5;
+  
+}
+
+.projet {
+  max-width: 750px;
+  padding: 30px;
+}
+
+.contact-form {
+  background-color: #121212;
+  color: #fff;
+  border-radius: 15px;
+  padding: 30px;
+  max-width: 600px;
+  margin: 50px auto;
+  box-shadow: 0 0 30px rgba(249, 192, 216, 0.2), 0 0 60px rgba(249, 192, 216, 0.3);
+}
+
+/* Titre et texte d'accroche */
+.contact-form p {
+  font-size: 20px;
+  line-height: 1.6;
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: 'Roboto', sans-serif;
+  color: #f9c0d8;
+}
+
+/* Labels des champs */
+.contact-form label {
+  font-size: 16px;
+  margin-bottom: 8px;
+  display: block;
+  font-weight: bold;
+  color: #f9c0d8;
+}
+
+/* Champs du formulaire */
+.contact-form input, 
+.contact-form textarea {
+  width: 100%;
+  padding: 10px;
+  margin: 10px 0 20px;
+  border: 2px solid #f9c0d8;
+  border-radius: 10px;
+  background-color: #222;
+  color: #fff;
+  font-size: 16px;
+  transition: all 0.3s ease;
+}
+
+.contact-form input:focus, 
+.contact-form textarea:focus {
+  border-color: #f9c0d8;
+  box-shadow: 0 0 5px rgba(249, 192, 216, 0.5);
+  outline: none;
+}
+
+/* Bouton d'envoi */
+.contact-form button {
+  background-color: #f9c0d8;
+  color: #fff;
+  padding: 12px 30px;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.3s ease;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.contact-form button:hover {
+  background-color: #f080a5;
+}
+
+/* Liens des icônes */
+.contact-form a {
+  margin: 10px;
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.contact-form a:hover {
+  transform: scale(1.1);
+  transform: translateY(-10px);
+}
+
+/* Style des icônes */
+.contact-form img {
+  width: 40px;
+  height: auto;
+  transition: transform 0.3s ease;
+}
+
+.contact-form img:hover {
+  transform: scale(1.1);
+}
+
+/* Mobile responsiveness */
+@media (max-width: 600px) {
+  .contact-form {
+      padding: 20px;
+      margin: 30px 10px;
+  }
+
+  .contact-form p {
+      font-size: 18px;
+  }
+
+  .contact-form input,
+  .contact-form textarea {
+      font-size: 14px;
+  }
+
+  .contact-form button {
+      font-size: 16px;
+  }
+}
+
+.txt3 {
+  font-weight: 900;
+  text-align: center;
+  padding: 20px;
+}
+
+.reseau {
+  gap: 80px; 
+  display: flex;
+  margin-left: 450px;
+}
+
+.reseau {
+  display: flex;
+  justify-content: flex-end; /* aligne à droite */
+  gap: 20px; /* espace entre les icônes */
+  padding: 20px 40px 40px 0; /* padding à droite + en bas */
+  font-size: 30px; /* taille des icônes */
+}
+
+.reseau a:hover {
+  transform: scale(1.1);
+  transform: translateY(-10px);
+  color: #f080a5;
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+
+  header ul {
+    flex-direction: column;
+    width: 100%;
+    gap: 10px;
+  }
+
+  header ul li {
+    margin: 5px 0;
+  }
+
+  header ul li a {
+    font-size: 16px;
+    padding: 10px 0;
+  }
+}
