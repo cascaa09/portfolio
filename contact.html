@@ -60,18 +60,18 @@
     <script src="sketch.js"></script>
     <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
 <script>
-  // Initialisation avec ta clé publique
+  
   (function () {
     emailjs.init("tHP3ZUKlQ3p9uanWx");
   })();
 
-  // Récupère le formulaire
+  
   const form = document.getElementById("contact-form");
 
   form.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // Ajoute la date/heure actuelle dans le champ hidden "time"
+    
     const now = new Date();
     const formattedTime = now.toLocaleString("fr-FR", {
       weekday: "long",
@@ -83,11 +83,11 @@
     });
     document.getElementById("time").value = formattedTime;
 
-    // Envoi via EmailJS
+   
     emailjs.sendForm("service_bnxx8lb", "template_mzstif5", this)
       .then(function () {
         alert("✉️ Message envoyé avec succès !");
-        form.reset(); // Réinitialise le formulaire
+        form.reset(); 
       }, function (error) {
         alert("❌ Une erreur est survenue : " + JSON.stringify(error));
       });

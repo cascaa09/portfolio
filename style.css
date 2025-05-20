@@ -21,7 +21,7 @@ canvas {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background-color: black
+  background-color: black;
 }
 
 
@@ -43,12 +43,12 @@ canvas {
 
 
 .animated-text {
-  opacity: 0; /* Début invisible */
+  opacity: 0; 
   animation: slideInLeft 1s ease-out forwards;
   animation-delay: 0.5s;
 }
 
-/* Animation séquencée pour chaque bloc de texte */
+
 .animated-text:nth-child(1) {
   animation-delay: 0.5s;
 }
@@ -70,7 +70,7 @@ canvas {
 }
 
 
-/* Style des éléments */
+
 h1 {
   font-size: 55px;
 }
@@ -130,7 +130,7 @@ logo {
 }
 
 .folio {
-  color: #f9c0d8; /* Rose un peu plus foncé */
+  color: #f9c0d8; 
   font-size: 28px;
   font-weight: 800;
 }
@@ -207,7 +207,7 @@ header ul li a::after {
   bottom: -4px;
   width: 0%;
   height: 2px;
-  background-color: #f9c0d8; /* Rose */
+  background-color: #f9c0d8; 
   transition: width 0.3s ease;
 }
 
@@ -240,7 +240,7 @@ header ul li a.active::after {
   max-width: 800px;
   margin: 80px auto; /* centré verticalement et horizontalement */
   padding: 40px;
-  background-color: black; /* rose très pâle, tu peux adapter */
+  background-color: black; 
   box-shadow: 0 0 15px rgba(249, 192, 216, 0.4), 0 0 60px rgba(249, 192, 216, 0.25); /* ombre douce */
   border-radius: 20px; /* bords arrondis */
   font-size: 18px;
@@ -268,7 +268,7 @@ header ul li a.active::after {
   padding: 0 20px;
 }
 .skill-card {
-  background-color: black; /* fond noir doux */
+  background-color: black; 
   box-shadow: 0 0 15px rgba(249, 192, 216, 0.4), 0 0 60px rgba(249, 192, 216, 0.25);
   border-radius: 20px;
   padding: 25px;
@@ -314,7 +314,7 @@ header ul li a.active::after {
   box-shadow: 0 0 30px rgba(249, 192, 216, 0.2), 0 0 60px rgba(249, 192, 216, 0.3);
 }
 
-/* Titre et texte d'accroche */
+
 .contact-form p {
   font-size: 20px;
   line-height: 1.6;
@@ -354,7 +354,7 @@ header ul li a.active::after {
   outline: none;
 }
 
-/* Bouton d'envoi */
+
 .contact-form button {
   background-color: #f9c0d8;
   color: #fff;
@@ -384,7 +384,7 @@ header ul li a.active::after {
   transform: translateY(-10px);
 }
 
-/* Style des icônes */
+
 .contact-form img {
   width: 40px;
   height: auto;

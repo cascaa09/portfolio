@@ -51,7 +51,7 @@ function windowResized() {
 }
 
 document.addEventListener("DOMContentLoaded", function () {
-  const text = "Manal Aiman"; // Ton nom complet
+  const text = "Manal Aiman"; 
   const nameElement = document.getElementById("typing-name");
   let index = 0;
 
@@ -69,19 +69,19 @@ document.addEventListener("DOMContentLoaded", function () {
 });
 
 
-// Initialiser EmailJS
+
 emailjs.init("YOUR_USER_ID");
 
-// Form submission
+
 document.getElementById("contact-form").addEventListener("submit", function (e) {
   e.preventDefault();
 
-  // Générer la date/heure actuelle
+ 
   const now = new Date();
   const formattedTime = now.toLocaleString();
   document.getElementById("time").value = formattedTime;
 
-  // Envoyer via EmailJS
+ 
   emailjs.sendForm("YOUR_SERVICE_ID", "YOUR_TEMPLATE_ID", this).then(
     function () {
       alert("Message envoyé avec succès !");
